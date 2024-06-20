@@ -20,7 +20,7 @@ return {
 			:spawn()
 
 		local status, _ = child:wait()
-		if not status:success() then
+		if not status.success then
 			ya.notify {
 				title = "Error creating directory",
 				content = child:read_line(),
